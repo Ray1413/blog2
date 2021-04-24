@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: Ray1413/blog2
   branch: main
   commit_messages:
     create: 'Create {{collection}} “{{slug}}”'
@@ -9,7 +10,11 @@ backend:
     deleteMedia: '[skip ci] Delete “{{path}}”'
 
 # Uncomment local_backend when you need to develop in your local
-local_backend: true # run npx netlify-cms-proxy-server for local testing
+# local_backend: true # run npx netlify-cms-proxy-server for local testing
+
+# Uncomment to leverage Netlify CMS UI authoring flow
+# see: https://www.netlifycms.org/docs/configuration-options/#publish-mode
+publish_mode: editorial_workflow
 
 media_folder: "static/assets" 
 public_folder: "/assets" 
